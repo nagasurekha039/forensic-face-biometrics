@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #070b14;
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Forensic Terminal Look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090e1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Forensic CRT Scanline Overlay */
+.forensic-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 3px 100%;
+}
+
+/* Radar Sweep Keyframe */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Glowing Border Utilities */
+.border-glow-cyan {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.25);
+}
+
+.border-glow-danger {
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.3);
+}
+
+/* Print Styles for Forensic Investigation Reports */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

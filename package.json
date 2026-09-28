@@ -1,0 +1,26 @@
+{
+  "name": "forensic-face-biometrics-platform",
+  "version": "1.0.0",
+  "description": "Smart Forensic Face Sketch Generation and Real-Time Biometric Identification using AI and Computer Vision - Academic B.Tech AIML Final Year Project",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "install:all": "npm --prefix frontend install",
+    "backend": "cd backend && venv\\Scripts\\activate && uvicorn main:app --reload",
+    "start": "npm --prefix frontend run dev"
+  },
+  "keywords": [
+    "forensics",
+    "face-sketch-generation",
+    "biometric-identification",
+    "arcface",
+    "yolo",
+    "deepsort",
+    "computer-vision",
+    "aiml-project"
+  ],
+  "author": "Department of Artificial Intelligence & Machine Learning",
+  "license": "Academic-Research"
+}
